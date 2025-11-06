@@ -1,36 +1,91 @@
+
 CREATE TABLE Courses (
- course_id INT PRIMARY KEY AUTO_INCREMENT,
- course_name VARCHAR(255),
+ course_id INT AUTO_INCREMENT PRIMARY KEY,
+ course_name VARCHAR(255) NOT NULL UNIQUE,
  course_description VARCHAR(255),
  course_student_join_code VARCHAR(255),
  course_instructor_join_code VARCHAR(255)
 );
 
+
+-- ============================================================
+-- Table: Users
+-- Description: Stores user account information for the app users
+-- Columns:
+--   user_id        : INT, Primary Key, Auto-incremented unique identifier for each user
+--   user_name      : VARCHAR(255), Required, Name of the user
+--   user_email     : VARCHAR(255), Required, Unique, Email address of the user
+--   user_password  : VARCHAR(255), Required, Hashed password of the user TODO
+--   user_location  : VARCHAR(255), Optional, Location of the user (nullable)
+-- ============================================================
 CREATE TABLE Users (
- user_id INT PRIMARY KEY AUTO_INCREMENT,
- user_name VARCHAR(255),
- user_email VARCHAR(255),
- user_password VARCHAR(255),
- user_location VARCHAR(255)
+ user_id INT AUTO_INCREMENT PRIMARY KEY,
+ user_name VARCHAR(255) NOT NULL,
+ user_email VARCHAR(255) NOT NULL UNIQUE,
+ user_password VARCHAR(255) NOT NULL,
+ user_location VARCHAR(255) DEFAULT NULL
 );
 
+-- The Queues table tracks student requests for help in courses, linking each request to a course and user.
+-- It includes estimated wait time, request status, topic description, timestamp, and optionally the instructor handling the request.
+-- The queue_instructor_user_id field is nullable, indicating that an instructor may not be assigned to a request.
+-- Relationships: course_id references Courses, user_id references Users.
+
+-- ============================================================================
+-- Table: Queues
+-- ----------------------------------------------------------------------------
+-- Purpose:
+--   Stores information about user waitlist requests for courses, including
+--   estimated wait time, request status, topic description, and timestamps.
+--
+-- Columns:
+--   queue_id                  : Primary key. Unique identifier for each queue entry.
+--   course_id                 : Foreign key. References Courses(course_id).
+--                               Identifies the course for which the waitlist is requested.
+--   user_id                   : Foreign key. References Users(user_id).
+--                               Identifies the user who made the waitlist request.
+--   queue_estimated_time      : Estimated wait time (in minutes).
+--   queue_request_status      : Status of the waitlist request.
+--                               Possible values: 'WAITING', 'IN_PROGRESS', 'DONE', 'CANCELED'.
+--   queue_topic_description   : Optional description of the topic or reason for the request.
+--   queue_timestamp           : Timestamp when the waitlist request was created.
+--   queue_instructor_user_id  : Foreign key (nullable). References Users(user_id).
+--                               Identifies the instructor handling the request, if assigned.
+--
+-- Constraints:
+--   - course_id:      References Courses table. Cascade on delete/update.
+--   - user_id:        References Users table. Cascade on delete/update.
+--   - queue_instructor_user_id: References Users table. Set NULL on delete, cascade on update.
+-- ============================================================================
+
 CREATE TABLE Queues (
- queue_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
- course_id INT NOT NULL REFERENCES Course(course_id),
- user_id INT NOT NULL REFERENCES User(user_id),
+ queue_id INT PRIMARY KEY AUTO_INCREMENT,
+ course_id INT NOT NULL,
+ user_id INT NOT NULL,
  queue_estimated_time INT NOT NULL,
  queue_request_status ENUM("WAITING","IN_PROGRESS","DONE","CANCELED") NOT NULL,
  queue_topic_description VARCHAR(255),
  queue_timestamp timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
- queue_instructor_user_id INT DEFAULT NULL
+ queue_instructor_user_id INT DEFAULT NULL,
+ FOREIGN KEY (course_id) REFERENCES Courses(course_id)
+ ON DELETE CASCADE ON UPDATE CASCADE,
+ FOREIGN KEY (user_id) REFERENCES Users(user_id)
+ ON DELETE CASCADE ON UPDATE CASCADE,
+ FOREIGN KEY (queue_instructor_user_id) REFERENCES Users(user_id)
+ ON DELETE SET NULL ON UPDATE CASCADE
 );
 
+-- update Permissions table to better reflect security best practices. i.e security roles
 CREATE TABLE Permissions (
- permission_id INT PRIMARY KEY AUTO_INCREMENT,
- course_id INT REFERENCES Course(course_id),
- user_id INT REFERENCES User(user_id),
+ permission_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+ course_id INT,
+ user_id INT,
  permission_type ENUM("INSTRUCTOR","STUDENT"),
- permission_location VARCHAR(255)
+ permission_location VARCHAR(255),
+ FOREIGN KEY (course_id) REFERENCES Courses(course_id)
+ ON DELETE CASCADE ON UPDATE CASCADE,
+ FOREIGN KEY (user_id) REFERENCES Users(user_id)
+ ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- initialize dummy values (test case driven)

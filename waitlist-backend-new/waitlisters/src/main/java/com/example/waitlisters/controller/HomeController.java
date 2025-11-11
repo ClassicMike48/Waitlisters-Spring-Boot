@@ -1,4 +1,4 @@
-package com.example.waitlisters;
+package com.example.waitlisters.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

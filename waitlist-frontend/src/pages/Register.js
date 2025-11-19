@@ -131,7 +131,7 @@ function Register() {
                             />
                             <label
                                 className="text-secondary disabled"
-                                for="firstName"
+                                htmlFor="firstName"
                             >
                                 First Name
                             </label>
@@ -148,7 +148,7 @@ function Register() {
                             />
                             <label
                                 className="text-secondary disabled"
-                                for="lastName"
+                                htmlFor="lastName"
                             >
                                 Last Name
                             </label>
@@ -165,7 +165,7 @@ function Register() {
                             />
                             <label
                                 className="text-secondary disabled"
-                                for="email"
+                                htmlFor="email"
                             >
                                 Email Address
                             </label>
@@ -182,7 +182,7 @@ function Register() {
                             />
                             <label
                                 className="text-secondary disabled"
-                                for="password"
+                                htmlFor="password"
                             >
                                 Password
                             </label>
@@ -199,7 +199,7 @@ function Register() {
                             />
                             <label
                                 className="text-secondary disabled"
-                                for="confirmPassword"
+                                htmlFor="confirmPassword"
                             >
                                 Confirm Password
                             </label>

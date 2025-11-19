@@ -14,14 +14,14 @@ class Homepage extends React.Component {
       <>
         {/*snippets taken from bootstrap docs and adapted from our own design and needs*/}
         <section id="title bg-success">
-          <nav class="navbar navbar-dark bg-dark justify-content-between">
-            <a class="navbar-brand" href="/">
+          <nav className="navbar navbar-dark bg-dark justify-content-between">
+            <a className="navbar-brand" href="/">
               FIFO
             </a>
             <div className="col-lg-3 text-end">
               <Link to="/login">
                 <button
-                  class="btn btn-outline-light btn-lg px-2 mx-2 my-2 my-sm-0"
+                  className="btn btn-outline-light btn-lg px-2 mx-2 my-2 my-sm-0"
                   type="submit"
                 >
                   Login
@@ -29,7 +29,7 @@ class Homepage extends React.Component {
               </Link>
               <Link to="/register">
                 <button
-                  class="btn btn-warning btn-lg text-dark my-2 my-sm-0"
+                  className="btn btn-warning btn-lg text-dark my-2 my-sm-0"
                   type="submit"
                 >
                   Register

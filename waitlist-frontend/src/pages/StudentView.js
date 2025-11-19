@@ -160,16 +160,16 @@ function StudentView({ useAuth }) {
         return (
             <>
                 <section id="title bg-success">
-                    <nav class="navbar navbar-dark bg-dark justify-content-between">
-                        <a class="navbar-brand" href="/">
+                    <nav className="navbar navbar-dark bg-dark justify-content-between">
+                        <a className="navbar-brand" href="/">
                             FIFO
                         </a>
-                        <div class="container-fluid col">
-                            <p class="navbar-brand mb-0 h1">Welcome to your Student View for Course {course_id}, @{user_id}</p>
+                        <div className="container-fluid col">
+                            <p className="navbar-brand mb-0 h1">Welcome to your Student View for Course {course_id}, @{user_id}</p>
                         </div>
                         <div className="col-lg-3 text-end">
                             <a
-                                class="btn btn-outline-light btn-lg px-2 mx-2 my-2 my-sm-0"
+                                className="btn btn-outline-light btn-lg px-2 mx-2 my-2 my-sm-0"
                                 href={"/dashboard/" + state.user_id}
                             >
                                 Back to Dashboard
@@ -177,7 +177,7 @@ function StudentView({ useAuth }) {
                         </div>
                     </nav>
                 </section>
-                <div class="row m-3">
+                <div className="row m-3">
                     <div className="col-lg-6 mb-3 sticky-top">
                         <div className="card justify-content-center text-center">
                             <div className="card-body justify-content-center text-center">
@@ -360,9 +360,9 @@ function StudentView({ useAuth }) {
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 mb-2">
-                        <div class="card">
-                            <div class="card-body">
+                    <div className="col-lg-6 mb-2">
+                        <div className="card">
+                            <div className="card-body">
                                 <StudentWaitlist
                                     headers={headers}
                                     data={state.queueData}

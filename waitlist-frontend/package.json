@@ -8,15 +8,14 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "react-router-dom": "^6.9.0"
+    "react-router-dom": "^6.9.0",
+    "web-vitals": "^2.1.4"
   },
+  "source": "public/index.html",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "parcel",
+    "build": "parcel build",
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": [
@@ -35,5 +34,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-jest": "^30.2.0",
+    "babel-preset-react-app": "^10.1.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^30.2.0",
+    "jest-watch-typeahead": "^3.0.1",
+    "parcel": "^2.16.1"
   }
 }

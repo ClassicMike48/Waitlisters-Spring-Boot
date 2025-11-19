@@ -179,4 +179,9 @@ psd
 thumb
 sketch
 
+###
+# Parcel additions
+.parcel-cache
+dist
+
 # End of https://www.toptal.com/developers/gitignore/api/node,java,react

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import InstructorTable from "./subpages/InstructorTable.js";
-import "/app/src/App.css";
+import "/src/App.css";
 import { useParams } from "react-router-dom";
 
 function InstructorView(props) {

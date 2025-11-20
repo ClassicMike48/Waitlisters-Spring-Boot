@@ -1,4 +1,4 @@
-const path = require('path').default;
+const path = require('path');
 
 module.exports = {
   process(src, filename) {

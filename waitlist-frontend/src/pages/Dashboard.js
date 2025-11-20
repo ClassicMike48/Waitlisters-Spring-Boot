@@ -342,7 +342,7 @@ function Dashboard({ setToken, useAuth }) {
                               onSubmit={handleSubmitCreateCourse}
                             >
                               <label
-                                for="course_name"
+                                htmlFor="course_name"
                                 className="form-label mt-3 mb-1"
                               >
                                 Course Name
@@ -503,10 +503,9 @@ function Dashboard({ setToken, useAuth }) {
                               onSubmit={handleSubmitStudentJoinCourse}
                             >
                               <label
-                                for="student_join_code"
+                                htmlFor="student_join_code"
                                 className="form-label mt-3 mb-1"
-                              ></label>
-                              Student Join Code
+                              >Student Join Code</label>
                               <input
                                 id="student_join_code"
                                 className="form-control mb-1"

@@ -89,7 +89,7 @@ function Login({ setToken }) {
                                 {/*pattern="[A-z0-9a-z]+@wisc.edu" title="Please enter a valid UW-Madison email address."*/}
                                 <label
                                     className="text-secondary disabled"
-                                    for="username"
+                                    htmlFor="username"
                                 >
                                     Email Address
                                 </label>
@@ -106,7 +106,7 @@ function Login({ setToken }) {
                                 />
                                 <label
                                     className="text-secondary disabled"
-                                    for="password"
+                                    htmlFor="password"
                                 >
                                     Password
                                 </label>

@@ -201,7 +201,7 @@ function InstructorView(props) {
                                                     />
                                                     <label
                                                         className="text-secondary disabled"
-                                                        for="location"
+                                                        htmlFor="location"
                                                     >
                                                         Location
                                                     </label>

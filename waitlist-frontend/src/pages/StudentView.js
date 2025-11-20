@@ -202,7 +202,7 @@ function StudentView({ useAuth }) {
                                                     />
                                                     <label
                                                         className="text-secondary disabled"
-                                                        for="changeTime"
+                                                        htmlFor="changeTime"
                                                     >
                                                         Time Needed
                                                     </label>
@@ -276,7 +276,7 @@ function StudentView({ useAuth }) {
                                                     />
                                                     <label
                                                         className="text-secondary disabled"
-                                                        for="changeTime"
+                                                        htmlFor="changeDesc"
                                                     >
                                                         Question
                                                     </label>

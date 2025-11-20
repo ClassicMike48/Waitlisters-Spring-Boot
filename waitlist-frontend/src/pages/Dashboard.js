@@ -1,4 +1,4 @@
-import "/app/src/App.css";
+import "/src/App.css";
 import React, { useState, useEffect, useLayoutEffect } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
@@ -279,16 +279,16 @@ function Dashboard({ setToken, useAuth }) {
       /* Javascript tab toggling inspired by https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=card-with-tabs-navigation */
       <>
         <section id="title bg-success">
-          <nav class="navbar navbar-dark bg-dark justify-content-between">
-            <a class="navbar-brand" href="/">
+          <nav className="navbar navbar-dark bg-dark justify-content-between">
+            <a className="navbar-brand" href="/">
               FIFO
             </a>
-            <div class="container-fluid col">
-              <p class="navbar-brand mb-0 h1">Your Dashboard (@{user_id})</p>
+            <div className="container-fluid col">
+              <p className="navbar-brand mb-0 h1">Your Dashboard (@{user_id})</p>
             </div>
             <div className="col-lg-3 text-end">
               <button
-                class="btn btn-outline-light btn-lg px-2 mx-2 my-2 my-sm-0"
+                className="btn btn-outline-light btn-lg px-2 mx-2 my-2 my-sm-0"
                 type="submit"
                 onClick={handleSignOut}
               >
@@ -300,18 +300,18 @@ function Dashboard({ setToken, useAuth }) {
         <div className="m-4">
           <div className="card text-center">
             <div className="card-header text-dark">
-              <ul class="nav nav-tabs card-header-tabs" id="myTab">
-                <li class="nav-item">
+              <ul className="nav nav-tabs card-header-tabs" id="myTab">
+                <li className="nav-item">
                   <a
                     href="#instructor"
-                    class="nav-link active"
+                    className="nav-link active"
                     data-bs-toggle="tab"
                   >
                     Instructor
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a href="#student" class="nav-link" data-bs-toggle="tab">
+                <li className="nav-item">
+                  <a href="#student" className="nav-link" data-bs-toggle="tab">
                     Student
                   </a>
                 </li>
@@ -343,7 +343,7 @@ function Dashboard({ setToken, useAuth }) {
                             >
                               <label
                                 for="course_name"
-                                class="form-label mt-3 mb-1"
+                                className="form-label mt-3 mb-1"
                               >
                                 Course Name
                               </label>
@@ -357,7 +357,7 @@ function Dashboard({ setToken, useAuth }) {
 
                               <label
                                 for="course_description"
-                                class="form-label mb-1"
+                                className="form-label mb-1"
                               >
                                 Course Description
                               </label>
@@ -369,7 +369,7 @@ function Dashboard({ setToken, useAuth }) {
                                 onChange={handleCourseDescriptionChange}
                               />
 
-                              <button class="btn btn-dark mt-2" type="submit">
+                              <button className="btn btn-dark mt-2" type="submit">
                                 Submit
                               </button>
 
@@ -417,7 +417,7 @@ function Dashboard({ setToken, useAuth }) {
                             >
                               <label
                                 for="join_code"
-                                class="form-label mt-3 mb-1"
+                                className="form-label mt-3 mb-1"
                               >
                                 Instructor Join Code
                               </label>
@@ -429,7 +429,7 @@ function Dashboard({ setToken, useAuth }) {
                                 onChange={handleInstructorJoinCodeChange}
                               />
 
-                              <button class="btn btn-dark mt-2" type="submit">
+                              <button className="btn btn-dark mt-2" type="submit">
                                 Submit
                               </button>
                             </form>
@@ -457,7 +457,7 @@ function Dashboard({ setToken, useAuth }) {
                         >
                           {instructor_course_list.map(
                             (instructor_course_list_i) => (
-                              <li class="dropdown-item justify-content-center text-center">
+                              <li className="dropdown-item justify-content-center text-center">
                                 <h2
                                   key={
                                     "IC" + instructor_course_list_i.course_id
@@ -504,7 +504,7 @@ function Dashboard({ setToken, useAuth }) {
                             >
                               <label
                                 for="student_join_code"
-                                class="form-label mt-3 mb-1"
+                                className="form-label mt-3 mb-1"
                               ></label>
                               Student Join Code
                               <input
@@ -514,7 +514,7 @@ function Dashboard({ setToken, useAuth }) {
                                 value={course_student_join_code}
                                 onChange={handleStudentJoinCodeChange}
                               />
-                              <button class="btn btn-dark mt-2" type="submit">
+                              <button className="btn btn-dark mt-2" type="submit">
                                 Submit
                               </button>
                             </form>

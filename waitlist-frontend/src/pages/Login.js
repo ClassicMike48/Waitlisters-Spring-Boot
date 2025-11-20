@@ -56,14 +56,14 @@ function Login({ setToken }) {
         return (
             <>
                 <section id="title bg-success">
-                    <nav class="navbar navbar-dark bg-light text-dark justify-content-between">
-                        <a class="navbar-brand text-dark" href="/">
+                    <nav className="navbar navbar-dark bg-light text-dark justify-content-between">
+                        <a className="navbar-brand text-dark" href="/">
                             FIFO
                         </a>
                         <div className="col-lg-3 text-end">
                         <Link to="/register">
                             <button
-                                class="btn btn-warning btn-lg text-dark my-2 my-sm-0"
+                                className="btn btn-warning btn-lg text-dark my-2 my-sm-0"
                                 type="submit"
                             >
                                 Register
@@ -73,7 +73,7 @@ function Login({ setToken }) {
                     </nav>
                 </section>
                 <div className="App Credentials">
-                    <div class="card-body card mt-3 p-5">
+                    <div className="card-body card mt-3 p-5">
                         <form className="form-group" onSubmit={handleSubmit}>
                             <h1 className="m-3 fw-normal h3">Login to FIFO</h1>
                             <div className="form-floating mb-3 mx-3">
@@ -121,7 +121,7 @@ function Login({ setToken }) {
                             </div>
                             <>{error}</>
                         </form>
-                        <p class="mt-5 mb-3 text-body-secondary">
+                        <p className="mt-5 mb-3 text-body-secondary">
                             © 2023 Waitlisters
                         </p>
                     </div>

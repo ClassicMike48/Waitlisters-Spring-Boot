@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "/app/src/App.css";
+import "/src/App.css";
 import { Navigate, Link} from "react-router-dom";
 
 
@@ -97,14 +97,14 @@ function Register() {
     } else {
         return (        <>
             <section id="title bg-success">
-                    <nav class="navbar navbar-dark bg-light text-dark justify-content-between">
-                        <a class="navbar-brand text-dark" href="/">
+                    <nav className="navbar navbar-dark bg-light text-dark justify-content-between">
+                        <a className="navbar-brand text-dark" href="/">
                             FIFO
                         </a>
                         <div className="col-lg-3 text-end">
                             <Link to="/login">
                                 <button
-                                    class="btn btn-warning btn-lg text-dark my-2 my-sm-0"
+                                    className="btn btn-warning btn-lg text-dark my-2 my-sm-0"
                                     type="submit"
                                 >
                                     Login
@@ -114,7 +114,7 @@ function Register() {
                     </nav>
                 </section>
             <div className="App Credentials">
-                <div class="card-body card mt-3 p-5">
+                <div className="card-body card mt-3 p-5">
                     <form className="form-group" onSubmit={handleSubmit}>
                         <h1 className="m-3 fw-normal h3">
                             Create a FIFO Account
@@ -131,7 +131,7 @@ function Register() {
                             />
                             <label
                                 className="text-secondary disabled"
-                                for="firstName"
+                                htmlFor="firstName"
                             >
                                 First Name
                             </label>
@@ -148,7 +148,7 @@ function Register() {
                             />
                             <label
                                 className="text-secondary disabled"
-                                for="lastName"
+                                htmlFor="lastName"
                             >
                                 Last Name
                             </label>
@@ -165,7 +165,7 @@ function Register() {
                             />
                             <label
                                 className="text-secondary disabled"
-                                for="email"
+                                htmlFor="email"
                             >
                                 Email Address
                             </label>
@@ -182,7 +182,7 @@ function Register() {
                             />
                             <label
                                 className="text-secondary disabled"
-                                for="password"
+                                htmlFor="password"
                             >
                                 Password
                             </label>
@@ -199,7 +199,7 @@ function Register() {
                             />
                             <label
                                 className="text-secondary disabled"
-                                for="confirmPassword"
+                                htmlFor="confirmPassword"
                             >
                                 Confirm Password
                             </label>
@@ -217,7 +217,7 @@ function Register() {
                             {registerStatus}
                         </p> 
                     </form>
-                    <p class="mt-5 mb-3 text-body-secondary">
+                    <p className="mt-5 mb-3 text-body-secondary">
                         © 2023 Waitlisters
                     </p>
                 </div>

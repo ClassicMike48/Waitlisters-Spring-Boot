@@ -1,4 +1,4 @@
-import "/app/src/App.css";
+import "/src/App.css";
 
 //Functional version
 function StudentWaitlist({ headers, data }) {

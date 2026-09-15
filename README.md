@@ -2,7 +2,7 @@
 # UW Waitlisters - Fall 2025
 
 ## What is UW Waitlisters?
-UW Waitlisters is a web application designed to streamline student-professor question sessions, often known as Office Hours. Office Hours offer students the ability to consult with the teaching faculty individually for help with a variety of issues: homework, lecture concepts, grading, test review, and more. UW Waitlisters offers a variety of features to better facilitate Office Hours events so students can recieve help in a timely manner while reducing management overhead for professors.  
+UW Waitlisters is a web application that streamlines student-professor question sessions, often known as Office Hours. Office Hours let students consult with teaching faculty individually for help with a variety of issues: homework, lecture concepts, grading, test review, and more. UW Waitlisters offers a variety of features to better support Office Hours events, so students can get help on time while reducing management overhead for professors.  
 
 ## Features
 - #### Create an account with UW Waitlisters. 
@@ -10,18 +10,18 @@ UW Waitlisters is a web application designed to streamline student-professor que
 - #### Users can view an estimated wait time for their course.
 - #### Students can enter/exit the waitlist online for maximum flexibility.
 - #### Students can provide their question topic while waiting for help.
-- #### Professors can post Office Hour meeting details visibile to all       members of the course.
+- #### Professors can post Office Hour meeting details visible to all members of the course.
 - #### Multiple professors can service the waitlist simultaneously
 - #### Professors have the ability to change the waitlist for a variety of administrative purposes.
 
 ## Further Notes on Design
-UW Waitlisters was a semester-long software project that I worked on with a team of colleagues in CS506 at UW-Madison, Spring 2023. This project was designed using the following tools...
+UW Waitlisters was a semester-long software project I worked on with a team of colleagues in CS506 at UW-Madison in Spring 2023. This project was designed using the following tools...
 
 - ### Front-End: React JS
 - ### Back-End: Node JS
 - ### Databse: MYSQL 
 
-This application also utilized docker containers for better project distribution and management.
+This application also utilized Docker containers for better project distribution and management.
 
 ## Contributors
 - ### Mayank Nayak
